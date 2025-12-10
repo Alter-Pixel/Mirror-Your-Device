@@ -29,3 +29,4 @@ Contributors: [Yassin Ahmed](https://yassin-ahmed.me) & [Adham Shawky](https://a
 Website: [Alter Pixel](https://alter-pixel.com)# Mirror-Your-Device
 # Mirror-Your-Device
 # Mirror-Your-Device
+# Mirror-Your-Device
