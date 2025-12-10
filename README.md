@@ -26,4 +26,4 @@ License: MIT
 
 Contributors: [Yassin Ahmed](https://yassin-ahmed.me) & [Adham Shawky](https://adham-shawki.com/)
 
-Website: [Alter Pixel](https://alter-pixel.com)# Mirror-Your-Device
+Website: [Alter Pixel](https://alter-pixel.com)
