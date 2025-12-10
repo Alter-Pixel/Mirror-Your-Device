@@ -1,0 +1,103 @@
+{
+  "name": "mirror-your-device",
+  "displayName": "Mirror Your Device",
+  "description": "Quickly list ADB devices and start scrcpy mirroring for a selected device.",
+  "version": "0.0.6",
+  "publisher": "AlterPixel",
+  "author": "Alter Pixel",
+  "license": "MIT",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Testing",
+    "Other"
+  ],
+  "keywords": [
+    "scrcpy",
+    "android",
+    "adb",
+    "mirror",
+    "device",
+    "screen"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:scrcpy.mirrorDevice",
+    "onCommand:scrcpy.checkDependencies"
+  ],
+  "main": "dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "scrcpy.mirrorDevice",
+        "title": "Mirror Device",
+        "category": "Mirror Your Device"
+      },
+      {
+        "command": "scrcpy.checkDependencies",
+        "title": "Check Dependencies (adb & scrcpy)",
+        "category": "Mirror Your Device"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Mirror Your Device Settings",
+      "properties": {
+        "scrcpy.adbPath": {
+          "type": "string",
+          "default": "adb",
+          "description": "Path to adb executable (leave as 'adb' if it's in PATH)."
+        },
+        "scrcpy.scrcpyPath": {
+          "type": "string",
+          "default": "scrcpy",
+          "description": "Path to scrcpy executable (leave as 'scrcpy' if it's in PATH)."
+        },
+        "scrcpy.filterStatus": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show only devices with status 'device' (hide unauthorized/offline)."
+        },
+        "scrcpy.showDependencyCheckOnStartup": {
+          "type": "boolean",
+          "default": true,
+          "description": "Run a check for adb & scrcpy availability when the extension activates (once per session)."
+        },
+        "mirrorYourDevice.rateNotification.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable rate notifications to help improve the extension."
+        },
+        "mirrorYourDevice.rateNotification.daysAfterInstall": {
+          "type": "number",
+          "default": 7,
+          "description": "Number of days after installation to show rate notification."
+        },
+        "mirrorYourDevice.rateNotification.showAfterFirstCommand": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show rate notification after first successful mirror command."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+  "watch": "tsc -watch -p ./",
+  "watch:fast": "tsc -p ./ --watch --preserveWatchOutput",
+    "package": "vsce package",
+    "lint": "eslint src --ext .ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.0",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "vsce": "^2.15.0"
+  }
+}
