@@ -120,10 +120,6 @@ async function listAdbDevices(adbPath, filterStatus) {
         for (const line of lines) {
             if (/^List of devices attached/.test(line))
                 continue;
-            // Example lines:
-            // 192.168.1.100:5555 device product:sargo model:Pixel_3 ...
-            // ZY22345ABC           device usb:336592896X product:reef model:Moto ...
-            // emulator-5554 offline
             const parts = line.trim().split(/\s+/);
             if (parts.length >= 2) {
                 const id = parts[0];
