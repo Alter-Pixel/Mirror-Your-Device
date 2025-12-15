@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.0.7
+- Added Repo Public
+
 ## 0.0.6
 - Added Rate System
 

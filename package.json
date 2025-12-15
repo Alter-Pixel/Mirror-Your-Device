@@ -2,7 +2,7 @@
   "name": "mirror-your-device",
   "displayName": "Mirror Your Device",
   "description": "Quickly list ADB devices and start scrcpy mirroring for a selected device.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "publisher": "AlterPixel",
   "author": "Alter Pixel",
   "license": "MIT",
@@ -22,6 +22,14 @@
     "device",
     "screen"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alter-Pixel/Mirror-Your-Device.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alter-Pixel/Mirror-Your-Device/issues"
+  },
+  "homepage": "https://github.com/Alter-Pixel/Mirror-Your-Device#readme",
   "activationEvents": [
     "onStartupFinished",
     "onCommand:scrcpy.mirrorDevice",
@@ -32,18 +40,18 @@
     "commands": [
       {
         "command": "scrcpy.mirrorDevice",
-        "title": "Mirror Device",
-        "category": "Mirror Your Device"
+        "title": "Scrcpy: Mirror Device",
+        "category": "Scrcpy"
       },
       {
         "command": "scrcpy.checkDependencies",
-        "title": "Check Dependencies (adb & scrcpy)",
-        "category": "Mirror Your Device"
+        "title": "Scrcpy: Check Dependencies (adb & scrcpy)",
+        "category": "Scrcpy"
       }
     ],
     "configuration": {
       "type": "object",
-      "title": "Mirror Your Device Settings",
+      "title": "Scrcpy Mirror Settings",
       "properties": {
         "scrcpy.adbPath": {
           "type": "string",
